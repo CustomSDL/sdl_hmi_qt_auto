@@ -12,3 +12,4 @@ name:
 runtimeParameters:
     arguments:
         - "--no-sandbox"
+        - "--disable-web-security"
