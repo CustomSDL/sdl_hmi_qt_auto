@@ -31,18 +31,17 @@
 
 import application.windows 1.0
 import shared.Sizes 1.0
-import shared Style 1.0
+import shared.Style 1.0
 import QtWebEngine 1.7
 
 ApplicationCCWindow {
     id: root
 
     WebEngineView {
-    	id: testApp
         x: exposedRect.x
-      	y: exposedRect.y
-      	width: exposedRect.width
-      	height: exposedRect.height
+        y: exposedRect.y
+        width: exposedRect.width
+        height: exposedRect.height
         url: "http://www.qt.io"
         webChannel: defaultWebChannel
     }
