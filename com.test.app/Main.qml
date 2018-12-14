@@ -29,18 +29,21 @@
 **
 ****************************************************************************/
 
-import QtQuick 2.0
-import QtQuick.Window 2.0
-import QtWebEngine 1.5
+import application.windows 1.0
+import shared.Sizes 1.0
+import shared Style 1.0
+import QtWebEngine 1.7
 
-Window {
-    width: 1024
-    height: 750
-    visible: true
+ApplicationCCWindow {
+    id: root
+
     WebEngineView {
     	id: testApp
-        anchors.fill: parent
-        url: ""
+        x: exposedRect.x
+      	y: exposedRect.y
+      	width: exposedRect.width
+      	height: exposedRect.height
+        url: "http://www.qt.io"
         webChannel: defaultWebChannel
     }
 }
