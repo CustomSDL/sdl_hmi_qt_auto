@@ -19,6 +19,7 @@
 #climate_control{
     width: 800px;
     height: 480px;
+    top: 20px;
     background: url(../images/climate/bg.png) no-repeat;
 }
 

@@ -68,6 +68,8 @@
     font-size: 21px;
     width: 324px;
     height: 48px;
+    top: 500px;
+    display: block;
     cursor: pointer;
     background: url(../images/common/media-status-bg.png) no-repeat;
     z-index: 1;

@@ -174,6 +174,8 @@ SDL.InfoAppsView = Em.ContainerView.create({
 
     itemsOnPage: 5,
 
+    disableScrollbar: true,
+
     /** Items */
     items: new Array()
   }

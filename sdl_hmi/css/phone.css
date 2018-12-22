@@ -8,6 +8,7 @@
 #phone {
 	width: 800px;
 	height: 480px;
+	top: 50px;
 	background: url(../images/phone/bg.png) no-repeat;
 	background-position: top;
 }  /*

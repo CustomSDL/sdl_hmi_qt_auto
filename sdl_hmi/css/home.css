@@ -29,6 +29,15 @@
     background: url("../images/home/home_climateWidget.png") 0 0 no-repeat;
 }
 
+#footerLogo {
+    position: absolute;
+    top: 700px;
+    left: 50px;
+    height: 480px;
+    width: 800px;
+    background: url(../images/ces/mycar.png) 0 0 no-repeat;
+}
+
 #radio_media_home_presetButtons_wrapper {
     top: 82px;
     left: 34px;

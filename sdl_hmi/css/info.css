@@ -593,7 +593,7 @@
 }
 
 #info_apps_list .list-content {
-	width: 279px;
+	width: 355px;
 	border: none !important;
 }
 
@@ -637,8 +637,7 @@
 
 #info_apps .list {
 	float: right;
-	margin-right: 41px;
-	width: 330px
+	width: 369px;
 }
 
 #info_apps_install_Button span {
