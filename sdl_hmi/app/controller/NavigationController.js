@@ -195,32 +195,32 @@ SDL.NavigationController = Em.Object.create(
       } else {
         return false;
       }
-      infowindow = new google.maps.InfoWindow(
-        {
-          size: new google.maps.Size(150, 50)
-        }
-      );
-      var myOptions = {
-        zoom: 16,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      SDL.NavigationController.map =
-        new google.maps.Map(document.getElementById('map'), myOptions);
-      address = SDL.NavigationController.model.startLoc;
-      geocoder = new google.maps.Geocoder();
-      geocoder.geocode(
-        {'address': address}, function(results, status) {
-          if (status == google.maps.DirectionsStatus.OK) {
-            SDL.NavigationController.map.fitBounds(
-              results[0].geometry.viewport
-            );
-          } else {
-            SDL.PopUp.create().appendTo('body').popupActivate(
-              'Navigation error: ' + status + '. Resend ShowConstantTBT!'
-            );
-          }
-        }
-      );
+      // infowindow = new google.maps.InfoWindow(
+      //   {
+      //     size: new google.maps.Size(150, 50)
+      //   }
+      // );
+      // var myOptions = {
+      //   zoom: 16,
+      //   mapTypeId: google.maps.MapTypeId.ROADMAP
+      // };
+      // SDL.NavigationController.map =
+      //   new google.maps.Map(document.getElementById('map'), myOptions);
+      // address = SDL.NavigationController.model.startLoc;
+      // geocoder = new google.maps.Geocoder();
+      // geocoder.geocode(
+      //   {'address': address}, function(results, status) {
+      //     if (status == google.maps.DirectionsStatus.OK) {
+      //       SDL.NavigationController.map.fitBounds(
+      //         results[0].geometry.viewport
+      //       );
+      //     } else {
+      //       SDL.PopUp.create().appendTo('body').popupActivate(
+      //         'Navigation error: ' + status + '. Resend ShowConstantTBT!'
+      //       );
+      //     }
+      //   }
+      // );
     },
     createMarker: function(latlng, label, html) {
       var contentString = '<b>' + label + '</b><br>' + html;

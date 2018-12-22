@@ -3,7 +3,7 @@
  */
 .ffw_list_menu {
     left: 440px;
-    width: 158px;
+    width: 258px;
     border: 1px solid #393939;
     overflow: hidden;
 }
@@ -39,7 +39,7 @@
 }
 
 .sdl-window {
-    width: 800px;
+    width: 900px;
     height: 480px;
     background-color: #000;
     z-index: 1;
@@ -120,7 +120,7 @@
 .sdl-window .caption-text {
     top: 80px;
     left: 75px;
-    width: 620px;
+    width: 720px;
     background: #393939;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -161,7 +161,7 @@
 #info_nonMedia .inner_content {
     left: 180px;
     top: 90px;
-    width: 600px;
+    width: 700px;
     height: 300px;
     overflow: hidden;
 }
@@ -224,7 +224,7 @@
 }
 
 #sdl_options .list {
-    width: 650px;
+    width: 800px;
     height: 251px;
     border-radius: 2px;
     left: 75px;
@@ -233,7 +233,7 @@
 
 /*#sdl_view_container .list-content,*/
 #sdl_options .list-content {
-    width: 590px;
+    width: 745px;
 }
 
 #VRPopUp.move {

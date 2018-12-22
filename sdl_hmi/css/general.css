@@ -105,9 +105,10 @@ div {
 
 .rev #home {
     background: url(../images/home/home_screen.png) no-repeat;
-    width: 800px;
+    width: 900px;
     height: 369px;
     top: 90px;
+    left: 50px;
 }
 
 /* Climate Status */
@@ -117,10 +118,11 @@ div {
     top: 500px;
     text-align: right;
     font-size: 21px;
-    width: 324px;
-    height: 48px;
+    width: 417px;
+    height: 50px;
     cursor: pointer;
     background: url(../images/common/climate-status-bg.png) no-repeat;
+    background-size: cover;
     z-index: 1;
 }
 
@@ -140,10 +142,11 @@ div {
     right: 0px;
     text-align: right;
     font-size: 21px;
-    width: 324px;
+    width: 370px;
     height: 48px;
     cursor: pointer;
     background: url(../images/common/nav-status-bg.png) no-repeat;
+    background-size: cover;
     z-index: 1;
 }
 
@@ -161,10 +164,9 @@ div {
 #app {
     /*position:relative;*/
     position: absolute;    
-    width: 800px;
+    width: 900px;
     height: 550px;
     top: 50px;
-    left: 50px;
     /*overflow: hidden;
      Mac font smoothing */
     -webkit-font-smoothing: antialiased;
@@ -386,9 +388,9 @@ div {
 #html5Player {
 	position: absolute;
 	z-index: 1;
-	width: 800px;
-	height: 480px;
-    top: 34px;
+	width: 900px;
+	height: 455px;
+    top: 46px;
 }
 
 #html5Player.visible {
@@ -451,6 +453,7 @@ div {
 }
 
 #top_controls {
+    left: 50px;
     width: 322px;
     height: 58px;
     background: url("../images/common/header_bg.png") no-repeat;
@@ -503,10 +506,10 @@ div {
 #app_bottom_controlls {
     z-index: 11000;
     bottom: 0px;
-    left: 275px;
+    left: 325px;
     width: 252px;
     height: 59px;
-    top: 490px;
+    top: 491px;
     /*background: url(../images/common/bottom_cont_bg.png) no-repeat;*/
     overflow: hidden;
     pointer-events: none;
@@ -660,10 +663,11 @@ div {
 
 /*MEDIA BLOCK CONTAINER*/
 #media {
-    width: 800px;
-    height: 480px;
-    top: 20px;
+    width: 900px;
+    height: 500px;
+    top: 50px;
     background: url(../images/media/bg.png) no-repeat;
+    background-size: cover;
 }
 
 /****************************** FOR MEDIA VIEW************************************************/
@@ -1214,9 +1218,8 @@ margin-top: 90px;
 
 /*CAUTION MESSAGE*/
 #warning_view {
-    width: 800px;
+    width: 900px;
     height: 550px;
-    left: 50px;    
     top: 50px;
     z-index: 12001;
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2a2a2a), color-stop(0.3, rgb(0, 0, 0)));

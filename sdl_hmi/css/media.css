@@ -66,12 +66,12 @@
     bottom: 0px;
     left: 0px;
     font-size: 21px;
-    width: 324px;
-    height: 48px;
+    width: 380px;
+    height: 50px;
     top: 500px;
-    display: block;
     cursor: pointer;
     background: url(../images/common/media-status-bg.png) no-repeat;
+    background-size: cover;
     z-index: 1;
 }
 
@@ -1209,7 +1209,7 @@
 .statusInfo .icon {
     width: 50px;
     height: 50px;
-    left: 224px;
+    left: 285px;
 }
 
 .cdIco {
@@ -1262,7 +1262,7 @@
     width: 150px;
     height: 40px;
     top:380px;
-    left:645px;
+    left:685px;
     border-radius: 3px;
     border: 1px solid #393939;
     z-index: 900;
@@ -1412,12 +1412,12 @@
 
 #volume_label {
     top: 55px;
-    left: 695px;
+    left: 735px;
 }
 
 #currentVolume_container.calc_container {
     top: 77px;
-    left: 646px;
+    left: 685px;
     z-index: 502;
 }
 
@@ -1426,15 +1426,15 @@
     width: 635px;
     height: 323px;
     top: 70px;
-    left: 161px;
+    left: 201px;
     z-index: 501;
 }
 
 #sdl_view_container_menu {
     top: 125px;
-    left: 650px;
-    width: 140px;
-    height: 265px !important;
+    left: 685px;
+    width: 150px;
+    height: 245px !important;
 }
 
 #media_fm_tuneButtons {

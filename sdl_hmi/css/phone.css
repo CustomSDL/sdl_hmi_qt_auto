@@ -6,11 +6,10 @@
  * @version		2.0
  */
 #phone {
-	width: 800px;
-	height: 480px;
-	top: 50px;
+	width: 900px;
+	height: 500px;
 	background: url(../images/phone/bg.png) no-repeat;
-	background-position: top;
+	background-size: cover;
 }  /*
 
 
@@ -126,9 +125,10 @@
 	left: 0px;
 	font-size: 21px;
 	cursor: pointer;
-	width: 324px;
+	width: 370px;
 	height: 48px;
 	background: url(../images/common/phone-statusbar-bg.png) no-repeat;
+	background-size: cover;
 	z-index: 1;
 }
 
@@ -145,7 +145,7 @@
 	width: 283px;
 	height: 30px;
 	position: absolute;
-	left: 258px;
+	left: 309px;
 	top: 87px;
 	text-align: center;
 	font-size: 22px;
@@ -159,7 +159,7 @@
 	width: 282px;
 	height: 200px;
 	position: absolute;
-	left: 259px;
+	left: 310px;
 	top: 141px;
 }
 
