@@ -10,3 +10,5 @@
 
  - For make package: ```appman-packager create-package project_name.tar.gz com.test.pelux_browser```
  - Install packaage: ```appman-controller install-package -a project_name.tar.gz```
+
+**Note!** Current HMI version was adjusted for 1600x900 screen resolution
