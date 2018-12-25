@@ -49,23 +49,23 @@ SDL.SDLNonMediaModel = SDL.ABSAppModel.extend({
 
     // init properties here
     this.set('appInfo', Em.Object.create({
-          field1: '<field1>',
-          field2: '<field2>',
-          field3: '<field3>',
-          field4: '<field4>',
+          field1: '',
+          field2: '',
+          field3: '',
+          field4: '',
           mainImage: SDL.SDLModel.data.defaultListOfIcons.trackIcon,
           image: '',
           customPresets: [
-            '<no definition>',
-            '<no definition>',
-            '<no definition>',
-            '<no definition>',
-            '<no definition>',
-            '<no definition>',
-            '<no definition>',
-            '<no definition>',
-            '<no definition>',
-            '<no definition>'
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            ''
           ],
           alignment: 'text-align:center'
         }
@@ -205,7 +205,7 @@ SDL.SDLNonMediaModel = SDL.ABSAppModel.extend({
     for (var i = 0; i < 10; i++) {
       if (!params.customPresets || (
         params.customPresets[i] == '' || params.customPresets[i] == null)) {
-        this.appInfo.get('customPresets').pushObject('PRESET_' + i);
+        this.appInfo.get('customPresets').pushObject('');
       } else {
         this.appInfo.get('customPresets').pushObject(params.customPresets[i]);
       }

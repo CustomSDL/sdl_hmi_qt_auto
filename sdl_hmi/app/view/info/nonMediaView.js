@@ -36,8 +36,6 @@ SDL.InfoNonMedia = Em.ContainerView.create(
 
     elementId: 'info_nonMedia',
 
-    controller: SDL.SDLController,
-
     childViews: [
       'content'
     ],
@@ -113,44 +111,75 @@ SDL.InfoNonMedia = Em.ContainerView.create(
 
             field1: SDL.Label.extend(
               {
-                contentBinding: 'controller.model.appInfo.field1',
                 attributeBindings: ['style'],
+                contentBinding: 'SDL.SDLController.model.appInfo.field1',
                 style: function() {
                   if (SDL.SDLController.model) {
-                    return SDL.SDLController.model.appInfo.alignment;
+                    var style = SDL.SDLController.model.appInfo.alignment + ';';
+                    style += SDL.SDLController.model.appInfo.field1.length == 0 ?
+                      'display:none' : '';
+                    return style;
                   } else {
                     return null;
                   }
-                }.property('SDL.SDLController.model.appInfo.alignment')
+                }.property('SDL.SDLController.model.appInfo.alignment',
+                           'SDL.SDLController.model.appInfo.field1')
               }
             ),
 
             field2: SDL.Label.extend(
               {
-                contentBinding: 'controller.model.appInfo.field2',
+                contentBinding: 'SDL.SDLController.model.appInfo.field2',
                 attributeBindings: ['style'],
                 style: function() {
                   if (SDL.SDLController.model) {
-                    return SDL.SDLController.model.appInfo.alignment;
+                    var style = SDL.SDLController.model.appInfo.alignment + ';';
+                    style += SDL.SDLController.model.appInfo.field2.length == 0 ?
+                      'display:none' : '';
+                    return style;
                   } else {
                     return null;
                   }
-                }.property('SDL.SDLController.model.appInfo.alignment')
+                }.property('SDL.SDLController.model.appInfo.alignment',
+                           'SDL.SDLController.model.appInfo.field2')
               }
             ),
 
             field3: SDL.Label.extend(
               {
-                contentBinding: 'controller.model.appInfo.field3'
+                contentBinding: 'SDL.SDLController.model.appInfo.field3',
+                attributeBindings: ['style'],
+                style: function() {
+                  if (SDL.SDLController.model) {
+                    var style = SDL.SDLController.model.appInfo.alignment + ';';
+                    style += SDL.SDLController.model.appInfo.field3.length == 0 ?
+                      'display:none' : '';
+                    return style;
+                  } else {
+                    return null;
+                  }
+                }.property('SDL.SDLController.model.appInfo.alignment',
+                           'SDL.SDLController.model.appInfo.field3')
               }
             ),
 
             field4: SDL.Label.extend(
               {
-                contentBinding: 'controller.model.appInfo.field4'
+                contentBinding: 'SDL.SDLController.model.appInfo.field4',
+                attributeBindings: ['style'],
+                style: function() {
+                  if (SDL.SDLController.model) {
+                    var style = SDL.SDLController.model.appInfo.alignment + ';';
+                    style += SDL.SDLController.model.appInfo.field4.length == 0 ?
+                      'display:none' : '';
+                    return style;
+                  } else {
+                    return null;
+                  }
+                }.property('SDL.SDLController.model.appInfo.alignment',
+                           'SDL.SDLController.model.appInfo.field4')
               }
             )
-
           }
         ),
 
@@ -235,72 +264,142 @@ SDL.InfoNonMedia = Em.ContainerView.create(
 
             perset1: SDL.Button.extend(
               SDL.PresetEvents, {
+                classNameBindings: ['hidden'],
                 textBinding: 'SDL.SDLController.model.appInfo.customPresets.0',
                 presetName: 'PRESET_0',
-                templateName: 'text'
+                templateName: 'text',
+                hidden: function() {
+                  if (SDL.SDLController.model) {
+                    var presets = SDL.SDLController.model.get('appInfo.customPresets');
+                    return !((presets.length > 1) && (presets.get(0).length > 0));
+                  }
+                }.property('SDL.SDLController.model.appInfo.customPresets.@each')
               }
             ),
             perset2: SDL.Button.extend(
               SDL.PresetEvents, {
+                classNameBindings: ['hidden'],
                 textBinding: 'SDL.SDLController.model.appInfo.customPresets.1',
                 presetName: 'PRESET_1',
-                templateName: 'text'
+                templateName: 'text',
+                hidden: function() {
+                  if (SDL.SDLController.model) {
+                    var presets = SDL.SDLController.model.get('appInfo.customPresets');
+                    return !((presets.length > 2) && (presets.get(1).length > 0));
+                  }
+                }.property('SDL.SDLController.model.appInfo.customPresets.@each')
               }
             ),
             perset3: SDL.Button.extend(
               SDL.PresetEvents, {
+                classNameBindings: ['hidden'],
                 textBinding: 'SDL.SDLController.model.appInfo.customPresets.2',
                 presetName: 'PRESET_2',
-                templateName: 'text'
+                templateName: 'text',
+                hidden: function() {
+                  if (SDL.SDLController.model) {
+                    var presets = SDL.SDLController.model.get('appInfo.customPresets');
+                    return !((presets.length > 3) && (presets.get(2).length > 0));
+                  }
+                }.property('SDL.SDLController.model.appInfo.customPresets.@each')
               }
             ),
             perset4: SDL.Button.extend(
               SDL.PresetEvents, {
+                classNameBindings: ['hidden'],
                 textBinding: 'SDL.SDLController.model.appInfo.customPresets.3',
                 presetName: 'PRESET_3',
-                templateName: 'text'
+                templateName: 'text',
+                hidden: function() {
+                  if (SDL.SDLController.model) {
+                    var presets = SDL.SDLController.model.get('appInfo.customPresets');
+                    return !((presets.length > 4) && (presets.get(3).length > 0));
+                  }
+                }.property('SDL.SDLController.model.appInfo.customPresets.@each')
               }
             ),
             perset5: SDL.Button.extend(
               SDL.PresetEvents, {
+                classNameBindings: ['hidden'],
                 textBinding: 'SDL.SDLController.model.appInfo.customPresets.4',
                 presetName: 'PRESET_4',
-                templateName: 'text'
+                templateName: 'text',
+                hidden: function() {
+                  if (SDL.SDLController.model) {
+                    var presets = SDL.SDLController.model.get('appInfo.customPresets');
+                    return !((presets.length > 5) && (presets.get(4).length > 0));
+                  }
+                }.property('SDL.SDLController.model.appInfo.customPresets.@each')
               }
             ),
             perset6: SDL.Button.extend(
               SDL.PresetEvents, {
+                classNameBindings: ['hidden'],
                 textBinding: 'SDL.SDLController.model.appInfo.customPresets.5',
                 presetName: 'PRESET_5',
-                templateName: 'text'
+                templateName: 'text',
+                hidden: function() {
+                  if (SDL.SDLController.model) {
+                    var presets = SDL.SDLController.model.get('appInfo.customPresets');
+                    return !((presets.length > 6) && (presets.get(5).length > 0));
+                  }
+                }.property('SDL.SDLController.model.appInfo.customPresets.@each')
               }
             ),
             perset7: SDL.Button.extend(
               SDL.PresetEvents, {
+                classNameBindings: ['hidden'],
                 textBinding: 'SDL.SDLController.model.appInfo.customPresets.6',
                 presetName: 'PRESET_6',
-                templateName: 'text'
+                templateName: 'text',
+                hidden: function() {
+                  if (SDL.SDLController.model) {
+                    var presets = SDL.SDLController.model.get('appInfo.customPresets');
+                    return !((presets.length > 7) && (presets.get(6).length > 0));
+                  }
+                }.property('SDL.SDLController.model.appInfo.customPresets.@each')
               }
             ),
             perset8: SDL.Button.extend(
               SDL.PresetEvents, {
+                classNameBindings: ['hidden'],
                 textBinding: 'SDL.SDLController.model.appInfo.customPresets.7',
                 presetName: 'PRESET_7',
-                templateName: 'text'
+                templateName: 'text',
+                hidden: function() {
+                  if (SDL.SDLController.model) {
+                    var presets = SDL.SDLController.model.get('appInfo.customPresets');
+                    return !((presets.length > 8) && (presets.get(7).length > 0));
+                  }
+                }.property('SDL.SDLController.model.appInfo.customPresets.@each')
               }
             ),
             perset9: SDL.Button.extend(
               SDL.PresetEvents, {
+                classNameBindings: ['hidden'],
                 textBinding: 'SDL.SDLController.model.appInfo.customPresets.8',
                 presetName: 'PRESET_8',
-                templateName: 'text'
+                templateName: 'text',
+                hidden: function() {
+                  if (SDL.SDLController.model) {
+                    var presets = SDL.SDLController.model.get('appInfo.customPresets');
+                    return !((presets.length > 9) && (presets.get(8).length > 0));
+                  }
+                }.property('SDL.SDLController.model.appInfo.customPresets.@each')
               }
             ),
             perset10: SDL.Button.extend(
               SDL.PresetEvents, {
+                classNameBindings: ['hidden'],
                 textBinding: 'SDL.SDLController.model.appInfo.customPresets.9',
                 presetName: 'PRESET_9',
-                templateName: 'text'
+                templateName: 'text',
+                hidden: function() {
+                  if (SDL.SDLController.model) {
+                    var presets = SDL.SDLController.model.get('appInfo.customPresets');
+                    return !((presets.length > 10) && (presets.get(9).length > 0));
+                  }
+                }.property('SDL.SDLController.model.appInfo.customPresets.@each')
               }
             )
           }
