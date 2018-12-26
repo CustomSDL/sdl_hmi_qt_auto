@@ -1,14 +1,28 @@
-# pelux_browser
+# SDL HMI
 
+HTML5 based utility to see how the SDL works. It connects via WebSocket to [SDLCore](https://github.com/LuxoftSDL/sdl_core)
 
-   1. Download the test.tar.gz  from github to your local mashine
-   2. Connect to the device with pelux via ssh and copy test.tar.gz to target by path ```/opt/neptune3/apps```. It can be done by command       (for instance) ```scp -r path/test.tar.gz root@192.168.0.100:/opt/neptune3/apps```
-   3. Install package ```appman-controller install-package -a test.tar.tar.gz```
-**Note!** that the neptune3 UI should be run at this time, for this porpuse we are connecting via ssh
-   3. Run ```systemctl restart neptune3``` for restart neptune3 UI
-   4. On apps set on pelux will appear the app with name - quicknanobrowser
+# Getting Started
+A quick guide to installing, configuring, and running HMI.
 
- - For make package: ```appman-packager create-package project_name.tar.gz com.test.pelux_browser```
- - Install packaage: ```appman-controller install-package -a project_name.tar.gz```
+	1. run SmartDeviceLinkCore
+	2. run chromium-browser [root_of_cloned_sdl_hmi_repo/index.html]
 
-**Note!** Current HMI version was adjusted for 1600x900 screen resolution
+## Simulating signals for LOW_VOLTAGE feature
+In order to simulate UNIX signals used by the LOW_VOLTAGE feature, some additional setup is required
+
+	1. run `deploy_server.sh`
+	2. run the HMI normally
+	3. open the `Exit Application` menu, choose a signal from the menu and press `Send signal`
+
+## A quick note about dependencies
+All dependencies are installed after the SDL Core is successfully installed.
+
+## Note
+SDL HMI utility is only for acquaintance with the SDL project.
+
+## Look at configuration file app/FLAGS.js. You can found there:
+ - SDL WebSocket connection string -
+WEBSOCKET_URL
+ - Python WebSocket url for handling signals -
+PYTHON_SERVER_URL
